@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   build:
-    name: Build Flutter web (example)
+    name: Build and Deploy Flutter web (example)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -47,8 +47,3 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy
-        uses: actions/deploy-pages@v1
-
